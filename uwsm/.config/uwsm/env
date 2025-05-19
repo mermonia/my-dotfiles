@@ -1,0 +1,1 @@
+[ -f "$HOME/.dotfiles/palettes/yae-miko/colors" ] && source "$HOME/.dotfiles/palettes/yae-miko/colors"
