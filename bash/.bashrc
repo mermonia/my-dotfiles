@@ -11,3 +11,6 @@ PS1='[\u@\h \W]\$ '
 
 alias cl='clear'
 alias dotfiles='/usr/bin/git --git-dir=/home/umbraslay/.local/src/dotfiles'
+
+export EDITOR='nvim'
+
