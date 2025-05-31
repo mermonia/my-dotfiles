@@ -1,0 +1,77 @@
+// -*- mode: jsonc -*-
+{
+	"output": "DP-1",
+	"layer": "top",
+	"position": "top",
+
+	"height": 40,
+	"width": 1024,
+	"spacing": 4,
+
+	"modules-left": [
+		"hyprland/workspaces"
+	],
+
+	"modules-center": [
+		"clock"
+	],
+
+	"modules-right": [
+		"cpu",
+		"memory",
+		"pulseaudio"
+	],
+
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"default": "",
+			"active": ""
+		},
+
+		"persistent-workspaces": {
+			"*": 4
+		}
+	},
+
+	"cpu": {
+		"interval": 10,
+		"format": "  {usage}%",
+		"max-length": 10 
+	},
+
+	"memory": {
+		"interval": 10,
+		"format": "  {percentage}%",
+		"max-length": 10 
+	},
+
+	"clock": {
+		"interval": 30,
+		"timezone": "Europe/Madrid",
+		"format": "{:%H:%M}"
+	},
+	
+	"pulseaudio": {
+		"scroll-step": 1,
+
+		"format": "{volume}% {icon}    {format_source}",
+		"format-muted": "{volume}% {icon}    {format_source}",
+
+		"format-bluetooth": "{volume} {icon}󰂯    {format_source}",
+		"format-bluetooth-muted": "{volume} {icon}󰂯    {format_source}",
+
+		"format-source": "{volume}% 󰍬",
+		"format-source-muted": "{volume}% 󰍬",
+
+		"format-icons": {
+			"headphone": "󰋋",
+			"headset": "󰋋",
+			"default": "󰋋"
+		},
+
+		"on-click": "pavucontrol"
+	}
+}
+	
+
