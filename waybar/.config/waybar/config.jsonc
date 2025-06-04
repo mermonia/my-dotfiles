@@ -4,19 +4,23 @@
 	"layer": "top",
 	"position": "top",
 
-	"height": 40,
-	"width": 1024,
+	"height": 50,
+    "margin": "10 15 0 15",
 	"spacing": 4,
 
 	"modules-left": [
-		"hyprland/workspaces"
+        "custom/ncspot-song",
+        "custom/ncspot-previous",
+        "custom/ncspot-playpause",
+        "custom/ncspot-next",
 	],
 
 	"modules-center": [
-		"clock"
+		"hyprland/workspaces"
 	],
 
 	"modules-right": [
+		"clock",
 		"cpu",
 		"memory",
 		"pulseaudio"
@@ -25,24 +29,26 @@
 	"hyprland/workspaces": {
 		"format": "{icon}",
 		"format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
 			"default": "",
-			"active": ""
 		},
 
 		"persistent-workspaces": {
-			"*": 4
+			"*": 3
 		}
 	},
 
 	"cpu": {
 		"interval": 10,
-		"format": "  {usage}%",
+		"format": "{usage}%",
 		"max-length": 10 
 	},
 
 	"memory": {
 		"interval": 10,
-		"format": "  {percentage}%",
+		"format": "{percentage}%",
 		"max-length": 10 
 	},
 
@@ -55,11 +61,11 @@
 	"pulseaudio": {
 		"scroll-step": 1,
 
-		"format": "{volume}% {icon}    {format_source}",
-		"format-muted": "{volume}% {icon}    {format_source}",
+		"format": "{volume}% {icon} {format_source}",
+		"format-muted": "{volume}% {icon} {format_source}",
 
-		"format-bluetooth": "{volume} {icon}󰂯    {format_source}",
-		"format-bluetooth-muted": "{volume} {icon}󰂯    {format_source}",
+		"format-bluetooth": "{volume} {icon}󰂯 {format_source}",
+		"format-bluetooth-muted": "{volume} {icon}󰂯 {format_source}",
 
 		"format-source": "{volume}% 󰍬",
 		"format-source-muted": "{volume}% 󰍬",
@@ -71,7 +77,34 @@
 		},
 
 		"on-click": "pavucontrol"
-	}
+    },
+
+    "custom/ncspot-previous": {
+        "format": "",
+        "on-click": "playerctl --player=ncspot previous && pkill -RTMIN+1 waybar"
+    },
+
+    "custom/ncspot-next": {
+        "format": "",
+        "on-click": "playerctl --player=ncspot next && pkill -RTMIN+1 waybar"
+    },
+
+    "custom/ncspot-song": {
+        "exec": "~/.config/waybar/scripts/ncspot_song.sh",
+        "return-type": "json",
+        "interval": 2,
+        "signal": 1
+    },
+
+    "custom/ncspot-playpause": {
+        "exec": "~/.config/waybar/scripts/ncspot_playpause.sh",
+        "return-type": "json",
+        "interval": 2,
+        "on-click": "playerctl --player=ncspot play-pause && pkill -RTMIN+1 waybar",
+        "signal": 1
+    }
+
 }
 	
+
 

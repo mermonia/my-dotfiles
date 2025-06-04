@@ -1,0 +1,41 @@
+* {
+    font-family: "FiraMono Nerd Font", "Fira Mono";
+    font-size: 16px;
+}
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+
+    border-radius: 5px;
+}
+
+window#waybar.hidden {
+    opacity: .2;
+}
+
+button {
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 0;
+}
+
+button:hover {
+    box-shadow: inset 0 -3px #ffffff;
+    background: inherit;
+}
+
+#workspaces,
+#clock,
+#cpu,
+#memory,
+#pulseaudio {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.modules-left {
+    padding-left: 10px;
+}
