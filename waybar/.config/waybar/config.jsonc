@@ -9,10 +9,10 @@
 	"spacing": 4,
 
 	"modules-left": [
-        "custom/ncspot-song",
         "custom/ncspot-previous",
         "custom/ncspot-playpause",
         "custom/ncspot-next",
+        "custom/ncspot-song",
 	],
 
 	"modules-center": [
@@ -20,18 +20,17 @@
 	],
 
 	"modules-right": [
-		"clock",
 		"cpu",
 		"memory",
-		"pulseaudio"
+        "clock",
 	],
 
 	"hyprland/workspaces": {
 		"format": "{icon}",
 		"format-icons": {
-            "1": "",
+            "1": "",
             "2": "",
-            "3": "",
+            "3": "",
 			"default": "",
 		},
 
@@ -42,20 +41,21 @@
 
 	"cpu": {
 		"interval": 10,
-		"format": "{usage}%",
+		"format": "  {usage}%",
 		"max-length": 10 
 	},
 
 	"memory": {
 		"interval": 10,
-		"format": "{percentage}%",
+		"format": "  {percentage}%",
 		"max-length": 10 
 	},
 
 	"clock": {
 		"interval": 30,
 		"timezone": "Europe/Madrid",
-		"format": "{:%H:%M}"
+		"format": "  {:%a.  %d/%m/%Y   %H:%M}",
+        "tooltip": false
 	},
 	
 	"pulseaudio": {
@@ -100,7 +100,7 @@
         "exec": "~/.config/waybar/scripts/ncspot_playpause.sh",
         "return-type": "json",
         "interval": 2,
-        "on-click": "playerctl --player=ncspot play-pause && pkill -RTMIN+1 waybar",
+        "on-click": "sh -c 'playerctl --player=ncspot play-pause; sleep 0.2; pkill -RTMIN+1 waybar'",
         "signal": 1
     }
 
