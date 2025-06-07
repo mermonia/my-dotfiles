@@ -1,0 +1,43 @@
+* {
+    font-family: Nunito;
+    font-size: 20px;
+}
+
+#window {
+    background-color: transparent;
+
+    margin: 0;
+    padding: 0;
+}
+
+#outer-box {
+    background-color: rgba(11, 04, 16, 0.95);
+
+    padding: 0 20px 10px;
+
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #F9629F;
+}
+
+#input {
+    background-color: rgba(91, 59, 140, 0.3);
+
+    padding: 10px 10px;
+    margin: 20px 0px;
+
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #F9629F;
+}
+
+#scroll {
+    background-color: transparent;
+}
+
+#entry {
+    padding: 12px 12px;
+}
+

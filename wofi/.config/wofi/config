@@ -1,0 +1,42 @@
+# Paths to the stylesheet and colors are relative to $XDG_CONFIG_HOME/wofi
+# style=
+# colors=
+
+mode=drun
+
+width=40%
+height=40%
+
+# Default prompt is the name of the mode
+# prompt=Search...
+
+normal_window=false
+allow_images=false
+allow_markup=false
+exec_search=false
+
+term=ghostty
+
+# Possible matching modes are fuzzy, contains or multi-contains
+matching=contains
+
+# See wofi(7) for more information
+location=center
+
+# Specifies the height in number of lines, instead of pixels/percentage
+# lines=10
+columns=1
+
+orientation=vertical
+
+halign=fill
+content_halign=fill
+valign=start
+
+# Rate at which search results are updated, in milliseconds
+filter_rate=100
+
+layer=top
+
+single_click=true
+
