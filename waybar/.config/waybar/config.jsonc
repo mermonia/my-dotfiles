@@ -20,6 +20,7 @@
 	],
 
 	"modules-right": [
+        "pulseaudio",
 		"cpu",
 		"memory",
         "clock",
@@ -51,29 +52,42 @@
 		"max-length": 10 
 	},
 
-	"clock": {
-		"interval": 30,
-		"timezone": "Europe/Madrid",
-		"format": "  {:%a.  %d/%m/%Y   %H:%M}",
-        "tooltip": false
-	},
+    "clock": {
+        "interval": 30,
+        "timezone": "Europe/Madrid",
+        "format": "  {:%a.  %d/%m/%Y   %H:%M}",
+        "tooltip": true,
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode":         "month",
+            "weeks-pos":    "right",
+            "format": {
+                "months":     "<span color='#ffead3'><b>{}</b></span>",
+                "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                "today":      "<span color='#ff6699'><b>{}</b></span>"
+            }
+        }
+
+    },
 	
 	"pulseaudio": {
 		"scroll-step": 1,
 
-		"format": "{volume}% {icon} {format_source}",
-		"format-muted": "{volume}% {icon} {format_source}",
+		"format": "{icon} {volume}%   {format_source}",
+		"format-muted": "{icon} {volume}%   {format_source}",
 
-		"format-bluetooth": "{volume} {icon}󰂯 {format_source}",
-		"format-bluetooth-muted": "{volume} {icon}󰂯 {format_source}",
+		"format-bluetooth": "{icon} {volume}󰂯   {format_source}",
+		"format-bluetooth-muted": "{icon} {volume}󰂯   {format_source}",
 
-		"format-source": "{volume}% 󰍬",
-		"format-source-muted": "{volume}% 󰍬",
+		"format-source": " {volume}%",
+		"format-source-muted": " {volume}%",
 
 		"format-icons": {
-			"headphone": "󰋋",
-			"headset": "󰋋",
-			"default": "󰋋"
+			"headphone": "",
+			"headset": "",
+			"default": ""
 		},
 
 		"on-click": "pavucontrol"
@@ -81,12 +95,14 @@
 
     "custom/ncspot-previous": {
         "format": "",
-        "on-click": "playerctl --player=ncspot previous && pkill -RTMIN+1 waybar"
+        "on-click": "playerctl --player=ncspot previous && pkill -RTMIN+1 waybar",
+        "tooltip": false
     },
 
     "custom/ncspot-next": {
         "format": "",
-        "on-click": "playerctl --player=ncspot next && pkill -RTMIN+1 waybar"
+        "on-click": "playerctl --player=ncspot next && pkill -RTMIN+1 waybar",
+        "tooltip": false
     },
 
     "custom/ncspot-song": {
