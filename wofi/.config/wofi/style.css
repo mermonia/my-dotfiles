@@ -11,14 +11,9 @@
 }
 
 #outer-box {
-    background-color: rgba(11, 04, 16, 0.95);
+    background-color: rgba(15, 03, 17, .5);
 
     padding: 0 20px 10px;
-
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 5px;
-    border-color: #F9629F;
 }
 
 #input {
@@ -26,11 +21,6 @@
 
     padding: 10px 10px;
     margin: 20px 0px;
-
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 5px;
-    border-color: #F9629F;
 }
 
 #scroll {
