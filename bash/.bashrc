@@ -14,3 +14,4 @@ alias dotfiles='/usr/bin/git --git-dir=/home/umbraslay/.local/src/dotfiles'
 
 export EDITOR='nvim'
 
+eval "$(starship init bash)"
