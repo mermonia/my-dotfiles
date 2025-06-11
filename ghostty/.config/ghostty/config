@@ -1,11 +1,8 @@
-# Run `ghostty +show-config --default --docs` to view a list of
-# all available config options and their default values.
+######################
+####### FONTS ########
+######################
 
-#######################
-######## FONTS ########
-#######################
-
-font-family = Inconsolata
+font-family = "Inconsolata Nerd Font"
 # font-family-bold = 
 
 font-style = Regular 
@@ -17,26 +14,69 @@ font-size = 16
 
 alpha-blending = linear-corrected
 
+
+
+######################
+####### THEME ########
 ######################
 
-window-padding-x = 4 
-#
-# # Spacing around the equals sign does not matter.
-# # All of these are identical:
-# key=value
-# key= value
-# key =value
-# key = value
-#
-# # Any line beginning with a # is a comment. It's not possible to put
-# # a comment after a config option, since it would be interpreted as a
-# # part of the value. For example, this will have a value of "#123abc":
-background = #000000
-#
-# # Empty values are used to reset config keys to default.
-# key =
-#
-# # Some config options have unique syntaxes for their value,
-# # which is explained in the docs for that config option.
-# # Just for example:
-# resize-overlay-duration = 4s 200ms
+theme = lovelace
+
+# Theme overrides:
+
+background = #0a000d
+
+selection-background = #d76aa4
+selection-foreground = #fefbff
+
+
+
+######################
+####### CURSOR #######
+######################
+
+cursor-opacity = 1
+cursor-style = block
+
+mouse-hide-while-typing = true
+
+
+
+######################
+####### SPLITS #######
+######################
+
+# unfocused-split-opacity = .5
+split-divider-color = #3e1b47
+
+
+
+######################
+####### SHELL ########
+######################
+
+shell-integration-features = no-cursor
+
+
+
+######################
+####### WINDOW #######
+######################
+
+maximize = false
+fullscreen = false
+
+window-padding-x = 8
+window-padding-y = 8
+window-padding-balance = true
+
+window-inherit-working-directory = true
+
+window-title-font-family = Inconsolata
+
+window-new-tab-position = current
+# window-titlebar-background = 
+# window-titlebar-foreground = 
+
+
+
