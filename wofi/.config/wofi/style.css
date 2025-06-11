@@ -11,14 +11,16 @@
 }
 
 #outer-box {
-    background-color: rgba(15, 03, 17, .5);
+    background-color: rgba(15, 03, 17, .9);
 
+    border-radius: 4px;
     padding: 0 20px 10px;
 }
 
 #input {
     background-color: rgba(91, 59, 140, 0.3);
 
+    border-radius: 4px;
     padding: 10px 10px;
     margin: 20px 0px;
 }
