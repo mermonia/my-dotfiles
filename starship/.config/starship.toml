@@ -4,10 +4,39 @@
 # Inserts a blank line between shell prompts
 add_newline = false
 
-# Replace the '❯' symbol in the prompt with '➜'
-[character] # The name of the module we are configuring is 'character'
-success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+format = "$directory$character  " 
+palette = "lovelace"
 
-# Disable the package module, hiding it from the prompt completely
+
+[palettes.lovelace]
+black = '#282a36'
+white = '#414458'
+red = '#ff4971'
+green = '#18e3c8'
+orange = '#ff8037'
+blue = '#556fff'
+purple = '#b043d1'
+cyan = '#3fdcee'
+
+
+
+[directory]
+format = '[@$path]($style)[$read_only]($read_only_style) '
+style = 'bold cyan'
+read_only = ' 󰌾'
+read_only_style = 'bold red'
+
+truncation_length = 4
+truncate_to_repo = true
+
+
+
+[character] 
+format = '$symbol'
+success_symbol = '[](bold green)' 
+error_symbol = '[](bold red)' 
+
 [package]
 disabled = true
+
+
