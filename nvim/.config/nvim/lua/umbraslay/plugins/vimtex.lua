@@ -18,9 +18,8 @@ return {
         local cond = require('nvim-autopairs.conds')
         local Rule = require('nvim-autopairs.rule')
 
-        npairs.add_rule(Rule("$$", "$$", "tex"))
-        npairs.add_rule(Rule("$$ ", " ", "tex"))
-
+        -- Incrementative approach to identical autopairs
+        npairs.add_rule(Rule("$", "$", "tex"))
     end,
 
 }
