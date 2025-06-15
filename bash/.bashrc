@@ -10,7 +10,7 @@ alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
 alias cl='clear'
-alias dotfiles='/usr/bin/git --git-dir=/home/umbraslay/.local/src/dotfiles'
+alias edots='cd ~/.local/src/dotfiles && nvim .'
 
 export EDITOR='nvim'
 
