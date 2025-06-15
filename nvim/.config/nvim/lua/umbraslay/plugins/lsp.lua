@@ -37,11 +37,6 @@ return {
         require('mason-lspconfig').setup({
             ensure_installed = {},
             handlers = {
-                function(server_name)
-                    require('lspconfig')[server_name].setup({
-                        capabilities = lsp_capabilities,
-                    })
-                end,
                 lua_ls = function()
                     require('lspconfig').lua_ls.setup({
                         capabilities = lsp_capabilities,
@@ -60,6 +55,12 @@ return {
                                 }
                             }
                         }
+                    })
+                end,
+
+                function(server_name)
+                    require('lspconfig')[server_name].setup({
+                        capabilities = lsp_capabilities,
                     })
                 end,
             }

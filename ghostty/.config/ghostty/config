@@ -23,7 +23,7 @@ theme = lovelace
 
 # Theme overrides:
 
-background = #0a000d
+background = #030008
 
 selection-background = #d76aa4
 selection-foreground = #fefbff
