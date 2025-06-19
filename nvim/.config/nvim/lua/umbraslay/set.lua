@@ -15,3 +15,5 @@ vim.opt.scrolloff = 8
 vim.opt.updatetime = 50
 
 vim.opt.cursorline = true
+
+vim.g.netrw_list_hide = [[\.gitkeep$]]
