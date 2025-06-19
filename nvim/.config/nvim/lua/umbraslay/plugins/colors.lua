@@ -15,6 +15,8 @@ function ColorMyPencils(color)
     vim.api.nvim_set_hl(0, "WinSeparator",  { bg = "none" })
     vim.api.nvim_set_hl(0, "SignColumn",    { bg = "none" })
     vim.api.nvim_set_hl(0, "FoldColumn",    { bg = "none" })
+
+    vim.api.nvim_set_hl(0, "CursorLine",    { bg = "#140020" })
 end
 
 return {

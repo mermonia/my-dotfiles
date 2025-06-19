@@ -96,7 +96,7 @@ return {
         )
 
         require('lspconfig').qmlls.setup {
-            cmd = {'qmlls6', '-E'}
+            cmd = {'qmlls6', '-E', '-I', '/usr/lib/qt6/qml'},
         }
     end
 
